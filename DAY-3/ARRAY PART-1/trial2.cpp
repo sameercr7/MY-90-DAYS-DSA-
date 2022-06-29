@@ -1,5 +1,5 @@
 //naive approach of 2nd largest number
-
+//function within function 
 #include<bits/stdc++.h>
 using namespace std;
 int secondlargest(int arr[],int n){
