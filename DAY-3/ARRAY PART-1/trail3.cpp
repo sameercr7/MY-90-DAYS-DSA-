@@ -1,5 +1,6 @@
 //sorted array naive approach 
 //time complexity is o(n^2)
+//use two for
 bool sort(int arr[],int n){
     for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++)
