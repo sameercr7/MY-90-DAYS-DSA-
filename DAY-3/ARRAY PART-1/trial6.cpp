@@ -25,7 +25,7 @@ for(int i=0;i<n;i++){
 int count=0;
 for(int i=0;i<n;i++){
     if(arr[i]!=0){
-        
+ //stack smashing detected error will come if count++ is before swap function       
         swap(arr[i],arr[count])
             count++;
     }
