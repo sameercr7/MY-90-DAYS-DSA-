@@ -2,6 +2,7 @@
 //simple approach
 // time complexity O(n)
 // space compelexity O(1)
+//i/p {1,2,3,4,5} o/p {2,3,4,5,1}
 void lrotate(int arr[],int n){
     int temp=arr[0];
     for(int i=1;i<n;i++){
