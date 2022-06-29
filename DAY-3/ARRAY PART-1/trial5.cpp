@@ -3,9 +3,10 @@
 // time complexity O(n)
 // space compelexity O(n)
 //take an empty array of same size
+//i/p = {10,20,20,20,30,30,30}
 int removedupli(int arr[],int n){
     int temp[n];
-    //foorst variable will be same as of original array
+    //first variable will be same as of original array
 
     temp[0]=arr[0];
     //res as a pointer for comaparing
@@ -33,7 +34,7 @@ int removedupli(int arr[],int n){
     int res=1;
     for(int i=1;i<n;i++){
         if(arr[i]!=arr[res-1]){
-            temp[res]=arr[i];
+            arr[res]=arr[i];
             res++;
       }
     }
