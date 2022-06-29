@@ -30,8 +30,8 @@ int main(){
 //efficient approach
 //time complexity is O(n)
 int maximum(int arr[],int n){
-    int c=0;
-    for(int i=0;i<n;i++){
+    int res=0;
+    for(int i=1;i<n;i++){
         if(arr[i]>arr[res]){
             res=i;
         }
