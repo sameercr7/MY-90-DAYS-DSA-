@@ -4,6 +4,8 @@
 // naive approach
 // e.g {2,3,10,6,4,8,1}
 // just take thge firs difference and comapre it with all
+#include<bits/stdc++.h>
+using namespace std;
 int maxDifff=(int arr[],int n)
 {
     int res=arr[1]-arr[0];
@@ -13,7 +15,7 @@ int maxDifff=(int arr[],int n)
 
         }
     }
-    print(res)
+    cout<<res;
 }
 // time complexity O(n)
 // space compelexity O(1)
@@ -31,7 +33,7 @@ for(int j=1;j<n;j++){
     res=max(res,arr[j]-minimumvalue)
     minimumvalue=min(minimumvalue,arr[j])
 }
-print(res)
+cout<<res;
 
 
 }
