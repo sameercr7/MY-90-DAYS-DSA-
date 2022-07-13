@@ -4,6 +4,8 @@
 // i/p ={7,20,4,10,6,5,2}
 // o/p 10 6 5 2
 //naive approach
+#include<bits/stdc++.h>
+using namespace std;
 void leader(int arr[],int n){
     for(int i=0;i<n;i++)
     {
@@ -16,7 +18,7 @@ void leader(int arr[],int n){
             }
         }
         if(flag==false)
-        print(arr[i]);
+        cout<<arr[i];
     }
 }
 // efficient approach
@@ -34,7 +36,7 @@ void leader(int arr[],int n){
         if(current_leader<arr[i])
         {
             current_leader=arr[i]
-            print(current_leader);
+            cout<<current_leader;
         }
 
     }
