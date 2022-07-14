@@ -28,14 +28,14 @@ void leader(int arr[],int n){
     // just copy the last elemnt in current leade and will be used in comparing
 
      int current_leader=arr[n-1];
-     print(current_leader)
+     cout<<current_leader;
 
     //  loop is very important do see it
     for(int i=n-2;i>=0;i--)
     {
         if(current_leader<arr[i])
         {
-            current_leader=arr[i]
+            current_leader=arr[i];
             cout<<current_leader;
         }
 
