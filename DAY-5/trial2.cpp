@@ -20,7 +20,7 @@ int maxDifff=(int arr[],int n)
 // time complexity O(n)
 // space compelexity O(1)
 //efficinet approach
-// we use minimum value in which we take first value of na array as first value
+// we use minimum value in which we take first value of an array as first value
 
 int maxDifff=(int arr[],int n)
 {
@@ -34,6 +34,4 @@ for(int j=1;j<n;j++){
     minimumvalue=min(minimumvalue,arr[j])
 }
 cout<<res;
-
-
 }
