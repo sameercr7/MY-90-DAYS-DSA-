@@ -35,6 +35,9 @@ int main(){
 }
 // EFFIECIENT APPROACH
 //time complexity is o(n)
+// i/p=5,0,6,2,3
+// lmax={5,5,6,6,6}
+// rmax={6,6,6,3,3}
 #include<bits/stdc++.h>
 using namespace std;
 int getwater(int arr[],int n){
