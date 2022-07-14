@@ -38,7 +38,20 @@ int main(){
 //EFFICIENT APPROACH
 //time complexity is O(n)
 //space complexity is o(1)
+//APPROACH - we know the time whwn to sell and to buy
+int maximum_profit(int price[],int n)
+{
+    int profit=0;
+    // we start the iteration i with so that it do not cause out of bound error smjho yr
 
+    for(int i=1;i<n;i++){
+        if(price[i]>price[i-1]){
+            profit+=price[i]-price[i-1];
+
+        }
+    }
+    return profit;
+}
 
 
 
