@@ -3,7 +3,7 @@
 // space compelexity O(1)
 // naive approach
 // e.g {2,3,10,6,4,8,1}
-// just take thge firs difference and comapre it with all
+// just take thge first difference and comapre it with all
 #include<bits/stdc++.h>
 using namespace std;
 int maxDifff=(int arr[],int n)
