@@ -31,3 +31,4 @@ int maxdiff(int arr[],int n){
     }
     return res;
 }
+// new update
