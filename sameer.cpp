@@ -1,13 +1,25 @@
+// MINIMUM GROUPS REQUIRED TO FLIP
+// efficient approach
+// time complexity O(n)
+// 
+//
+//  
+//
+// 
+// 
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-   int a;
-   char b;
-   cin>>a>>b;
-
-    cout<<"hello"<<" "<<a<<" "<<b;
+int (int arr[],int n)
+{
+    
+        
+         
 }
-#it only take only one value bcoz it is a character
-#456 7789
-o/p hello 456 7
-#return 0 sirf yhi btata h ki code ab complete hochuka h
+
+int main(){
+    int arr[] = {8,7,6,8,6,6,6,6};
+    int n=8;
+    int d=majorityelement(arr,n);
+    cout<<d;
+
+}
