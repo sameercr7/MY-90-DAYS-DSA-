@@ -1,6 +1,6 @@
 // palindrome using recursion
 //time complexity O(n)
-// space comlexity O(n/2)
+// space comlexity O(n)
 #include<bits/stdc++.h>
 using namespace std;
 bool pallindrom(string &str,int start,int end){
