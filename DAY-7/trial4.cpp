@@ -72,3 +72,24 @@ int main(){
     cout<<d;
 
 }
+
+
+
+// solution
+int majorityElement(vector<int>& nums) {
+    int count=1,res=nums[0];
+        
+        for(int j=1;j<nums.size();j++)
+        {
+            if(nums[j]==res)
+                count++;
+            else
+               count--;
+            if(count==0){
+               res=nums[j];
+               count=1;
+            
+        }}
+        
+     return res ; 
+}
