@@ -1,25 +1,25 @@
-// MINIMUM GROUPS REQUIRED TO FLIP
-// efficient approach
-// time complexity O(n)
-// 
-//
-//  
-//
-// 
-// 
 #include<bits/stdc++.h>
 using namespace std;
-int (int arr[],int n)
-{
-    
+    int majorityElement()
+     {
+        vector<int> nums={3,2,3};
+        int n = nums.size();
+        int majority = nums[0];
+        int count = 1;
         
-         
-}
-
-int main(){
-    int arr[] = {8,7,6,8,6,6,6,6};
-    int n=8;
-    int d=majorityelement(arr,n);
-    cout<<d;
-
-}
+        for(int i=1;i<n;++i)
+        {
+            if(nums[i]==majority)
+                count += 1;
+            else
+            {
+                count -= 1;
+                if(count==0)
+                {
+                    majority = nums[i];
+                    count = 1;
+                }
+            }
+        }
+        return majority;
+    }
