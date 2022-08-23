@@ -188,12 +188,11 @@
 	st.push(1); 
  
  
-	cout << st.top() // prints 2 
+	cout << st.top() // prints 1
 	st.pop(); // deletes the last entered element 
 	cout << st.top(); // prints 3 
 	st.pop(); 
-	cout << st.top(); 
- 
+	 cout << st.top(); // /print 4  
 	bool flag = st.empty(); // returns true if stack is empty, or false
  
 	// deleted the entire stack 
@@ -215,7 +214,9 @@
 	// pop 
 	// size 
 	// empty 
- 
+
+//  all os big of O(1) except deletion of entire stack it is O(n) as we have to delete manually
+
 	queue<int> q; 
 	q.push(1); 
 	q.push(5);
@@ -239,13 +240,15 @@
 	// push 
 	// size 
 	// top pop empty 
+	// does all operation in lograthimic log(n) and in sorted order
+	//  it keeps the maximum elemneent at top
 	priority_queue<int> pq;
 	pq.push(1); 
 	pq.push(5); 
 	pq.push(2); 
 	pq.push(6); 
  
-	cout << pq.top(); // print 6 
+	cout << pq.top(); //  print 6 
 	pq.pop(); 
 	cout << pq.top(); // print 5 
  
@@ -254,6 +257,7 @@
 	pq.push(1, 6); 
 	pq.push(1, 7); 
  
+//  this is creation of minimum priority queue by using maximum priority queue 
 	priority_queue<int> pq;
 	pq.push(-1); // pq.push(-1 * el); 
 	pq.push(-5); 
@@ -286,8 +290,8 @@
 	// clear
 	// empty 
 	// at 
- 
- 
+//  it is doubley ended queue
+  
 	list<int> ls; 
 	// push_front() 
 	// push_back() 
