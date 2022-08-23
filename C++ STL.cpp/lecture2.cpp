@@ -5,10 +5,9 @@
 	// set map 
  
 	// set 
- 
 	// given n elements, tell me the number of unique elements 
 	arr[] = {2, 5, 2, 1, 5} // 3 unique elements -> {1. 2. 5}
- 
+//  first index is alwasy a smallest guy in the array 2nd be 2nd smallest
 	set<int> st; 
 	int n;
 	cin >> n;
@@ -25,7 +24,7 @@
 	// log n 
 	st.erase(st.begin()); // st.erase(iterator) // st -> {2, 5}
  
-	// log n 
+	// log n  to insert these elements in it
 	// 77777777777
 	st.erase(st.begin(), st.begin() + 2); // -> [)
 	// st.erase(startIterator, endIterator) 
@@ -166,12 +165,13 @@
 	map< pair<int,int>, int> mpp; 
  
  
- 
 	multimap<string, int> mpp;
 	mpp.emplace("raj", 2); 
 	mpp.emplace("raj", 5); 
  
- 
+//  map sorted and unique keys
+//  unordered_map not sorted and unique keys
+//  multimap sorted and  multiple keys
  
  
 	// Stack and Queue 
