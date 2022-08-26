@@ -7,7 +7,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
- vector < vector < int >> solve(vector<vector<int>> &ans,vector<int> &nums,vector<int> &ds,int freq[]){
+ vector<vector<int>> solve(vector<vector<int>> &ans,vector<int> &nums,vector<int> &ds,int freq[]){
     if(ds.size()==nums.size()){
         ans.push_back(ds);
         return;
