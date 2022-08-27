@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -37,6 +31,8 @@ int main(){
        cin>>m;
        nums.push_back(m);
    }
+   for(int i=0;i<n;i++)
+       freq[i]=0;
    sumation=solve(ans,nums,ds,freq);
    for (int i = 0; i < sumation.size(); i++) {
     for (int j = 0; j < sumation[i].size(); j++)
