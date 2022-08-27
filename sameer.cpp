@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-    int majorityElement()
+    int main()
      {
         vector<int> nums={3,2,3};
         int n = nums.size();
@@ -21,5 +21,6 @@ using namespace std;
                 }
             }
         }
-        return majority;
+        cout<<majority;
+        return 0;
     }
