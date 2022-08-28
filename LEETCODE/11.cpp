@@ -56,3 +56,39 @@ string s="abcabcbb";
         cout<<maxi;
         return 0;
 }
+
+
+
+
+// best approach
+// using hash map ... most important  vector<int> mappy(256,-1); take always this to avoid errors
+
+#include<bits/stdc++.h>
+using namespace std;
+class Solution {
+  public:
+    int lengthofLongestSubstring(string s) {
+     vector<int> mappy(256,-1);
+  
+      int left = 0, right = 0;
+      int n = s.size();
+      int len = 0;
+      while (right < n) {
+        if (mappy[s[right]] != -1)
+          left = max(mappy[s[right]] + 1, left);
+
+        mappy[s[right]] = right;
+
+        len = max(len, right - left + 1);
+        right++;
+      }
+      return len;
+    }
+};
+
+int main() {
+  string str = " ";
+  Solution obj;
+  cout << "The length of the longest substring without repeating characters is " << obj.lengthofLongestSubstring(str);
+  return 0;
+}
