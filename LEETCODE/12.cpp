@@ -36,8 +36,6 @@
 // approach simple just use j=k-1 so that it directly jumps to the subtracting position
 // then another main part is starting of while loop that is from j
 
-
-
 #include<bits/stdc++.h>
 using namespace std;
  int main() {
