@@ -149,9 +149,17 @@ if(ind!=n && vec[ind]==x)
 else 
    cout<<"not found";
 
+// ques find out the last occurunce of x in an arr={1,5,7,7,8,10,10,10,11,11,12}
+// 0 is a last case or failing case as it will decrese the index as -1
+// so for that right the conditon
 
 
-
+int ind=upper_bound(vec.begin(),vec.end(),x)-vec.begin();
+ind-=1;
+if(ind>=0 && vec[ind]==x)
+   cout<<"found";
+else 
+   cout<<"not found";
 
 
 
