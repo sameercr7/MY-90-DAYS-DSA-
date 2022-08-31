@@ -3,7 +3,7 @@
 // i+k-1 just do it on copy you will understand the pattern
 // time complexity O(n-k)*k
 // space complexity O(1)
-
+// i+k-1 is to check that the boundation 
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
