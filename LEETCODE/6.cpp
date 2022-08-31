@@ -36,7 +36,11 @@
 // problem link - https://leetcode.com/problems/find-the-k-beauty-of-a-number/
 // Time complexity: O(N^2), where N is the length of the input string.
 // Auxiliary Space: O(N), where N is the length of the input string.
+.................
+
 // this is the way to calculate substring of any integer 
+
+................
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
