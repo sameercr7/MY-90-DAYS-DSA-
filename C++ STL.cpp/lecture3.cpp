@@ -93,6 +93,7 @@ else
 // this stl is work on only sorted array
 // works on log(n) function
 
+....listed  STL work only if array is sorted
 
 // vec={1,5,7,9,10}
 // x=9
@@ -158,7 +159,7 @@ else
    cout<<"not found";
 
 // ques find out the last occurunce of x in an arr={1,5,7,7,8,10,10,10,11,11,12}
-// 0 is a last case or failing case as it will decrese the index as -1
+// 0 is a last case or failing case as it will decrese the index as -1 which is wrong so for correction put the condition ind>=0
 // so for that right the conditon
 
 
@@ -169,13 +170,154 @@ if(ind>=0 && vec[ind]==x)
 else 
    cout<<"not found";
 
+//Ques-3 how many times the x appears in arr
+// arr={1,5,7,7,8,10,10,10,11,11,12};
+// x=10 so answer should be 3
+
+// but 2logn compelxity
+  int x=10;
+  vector<int> vec={1,5,7,7,8,10,10,10,11,11,12};
+  auto it =lower_bound(vec.begin(),vec.end(),x)-vec.begin();
+  auto it1=upper_bound(vec.begin(),vec.end(),x)-vec.begin();
+ 
+cout<<"its occurunce ="<<it1-it;
+
+// NEXT PERMUTATION
+// string s="abc"
+// all permutations asre as follows
+
+// abc
+// acb
+// bac
+// bca
+// cab
+// cba
+
+time complexity is= o(n)
+
+string s="abc";
+  bool res=next_permutation(s.begin(),s.end());
+  cout<<s;
+
+//   it will print automatically next permutation of string abc that is acb
+// if you will give "cba" and perform next permutation then it will five false 
+
+// if I give you random string  s="bca"
+// NOW to  print all the permutations
 
 
 
+// time complexity sorting takes nlog(n)  and do while take N! factorial
+ string s="cba";
+ sort(s.begin(),s.end())
+ #include<bits/stdc++.h>
+using namespace std;
+int main(){
+  string s="cba";
+ sort(s.begin(),s.end());
+ do{
+   cout<<s<<endl;
+ }while(next_permutation(s.begin(),s.end()));
+ 
+
+return 0;
+}
+....   
+bool res=prev_permutation(s.begin(),s.end())
+....
+
+// ARRAY IS GIVEN SO
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+//   string s="cba";
+  vector<int> s={1,2,3};
+ sort(s.begin(),s.end());
+ do{
+    for(auto it:s)
+        cout<<it<<" ";
+    cout<<endl;
+ }while(next_permutation(s.begin(),s.end()));
+ 
+
+return 0;
+}
 
 
+ //  COMPARATOR
+always think of just two elements if they are correctly sorted return yes and if not then return no
+
+ques 
+// arr
+// pair<int,int> vec={{1,4},{5,2},{5,9}};
+// after sprting array shoul look lik this vec={{1,4},{5,9},{5,2}};
+// i want the element who have first element in pair smaller
+// appears first ,and if first is equal then sort a/c to the 
+// second and keep the larger second.
+
+// o/p shoould be like 1,4
+                  //   5,9
+                  //   5,2
+
+bool com(pair<int,int> el1,pair<int,int> el2)
+{
+   if(el.first<el2.first){
+      return true;
+   }
+   if(el1.first == el2.first){
+      if(el1.second>el2.second){
+         return true;
+      }
+   }
+   return false;
+   // ab to mtlb swap hi krdo bus
+}
+
+sort(vec.begin(),vec.end(),comp)
 
 
+// here is the soloution
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+ 
+ bool comp(pair<int,int> el1,pair<int,int> el2)
+{
+   if(el1.first<el2.first){
+      return true;
+   }
+   if(el1.first == el2.first){
+      if(el1.second>el2.second){
+         return true;
+      }
+   }
+   return false;
+   // ab to mtlb swap hi krdo bus
+}
+int main(){
+
+
+ vector<pair<int,int>> vec={{1,4},{5,2},{5,9}};
+sort(vec.begin(),vec.end(),comp);
+for (int i=0; i<vec.size(); i++)
+    {
+        // "first" and "second" are used to access
+        // 1st and 2nd element of pair respectively
+        cout << vec[i].first << " "
+             << vec[i].second << endl;
+    }
+  
+return 0;
+}
+
+// o/p
+1 4
+5 9
+5 2
+
+    
 
 
 
