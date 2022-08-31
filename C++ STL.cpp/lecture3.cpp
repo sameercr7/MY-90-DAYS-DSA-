@@ -36,6 +36,7 @@ cout<<bt.test(2)<<endl;
 // Algorithm
 // sorting
 // arry,vector
+
 int n;
 cin>>n;
 int arr[n];
@@ -111,6 +112,13 @@ else
 
 int x=4;
 auto it =lower_bound(vec.begin(),vec.end(),x);
+int x=2;
+  vector<int> vec={1,5,7,7,8,10,10,10,11,11,12};
+  auto it =lower_bound(vec.begin(),vec.end(),x);
+
+    
+    cout<<vec[it-vec.begin()];
+   //  o/p is 5
 
 // upper bound function
 // return an iterator pointing to the first
@@ -129,7 +137,7 @@ auto it =upper_bound(vec.begin(),vec.end(),x);
 // arr={1,5,7,7,8,10,10,10,11,11,12};
 // find x=7
 // do it in log(n)
-// for 7 only lower bound will work but if x=6 then it will give ooutput as
+// only lower bound will not work  if x=6 then it will give output as 7 and if x=6 it again gives same output 7
 
 // this takes 2log(n) 
 if(binary_search(vec.begin(),vec.end(),x)==true){
