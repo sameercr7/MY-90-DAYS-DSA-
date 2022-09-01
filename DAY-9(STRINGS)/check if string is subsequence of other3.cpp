@@ -8,6 +8,8 @@
 // time complexity =O(m+n) in worst case 
 // space complexity =O(1)
 
+// aur subsequence mtlb ek hi order mein hota h.....subsequent alag hota h usmein order zarroi ni hota
+
 
 
 #include <bits/stdc++.h>
