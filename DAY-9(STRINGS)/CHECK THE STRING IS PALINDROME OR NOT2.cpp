@@ -4,7 +4,7 @@
 // time complexity =O(n)
 //  space complexity=O(n)
 
-
+// two pointer approach
 
 
 // but this approach in worst case O(n) wrna O(1) rhegii...space bi O(1) rhegii
