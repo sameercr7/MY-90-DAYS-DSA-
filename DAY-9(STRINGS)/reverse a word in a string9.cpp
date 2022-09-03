@@ -52,6 +52,10 @@ int main()
 // 2nd logic if to remove extra spaces (trailing,leading) and have condiiton that  atlease one space in between
 // then abpve logic kaam ni aayega shi se
 ................
+
+// problem link-https://leetcode.com/problems/reverse-words-in-a-string/
+
+
 #include <bits/stdc++.h> 
 using namespace std; 
 
