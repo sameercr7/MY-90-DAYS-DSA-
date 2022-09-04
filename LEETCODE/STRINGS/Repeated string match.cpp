@@ -23,8 +23,9 @@
 
 // Input: a = "a", b = "aa"
 // Output: 2
-https://leetcode.com/problems/repeated-string-match/discuss/2303190/C%2B%2B-or-3-Approaches-or-Brute-force-or-Rabin-Karp-or-KMP-search-or-Standard-implementation
-problem link=https://leetcode.com/problems/repeated-string-match/
+
+// https://leetcode.com/problems/repeated-string-match/discuss/2303190/C%2B%2B-or-3-Approaches-or-Brute-force-or-Rabin-Karp-or-KMP-search-or-Standard-implementation
+// problem link=https://leetcode.com/problems/repeated-string-match/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -43,9 +44,7 @@ bool check(string &a,string &b){
         }
 }
 
-
-
-    int repeatedStringMatch(string a, string b) {
+  int repeatedStringMatch(string a, string b) {
      int m=a.size();
         int n=b.size();
         int count=1;
