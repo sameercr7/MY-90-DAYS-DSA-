@@ -19,6 +19,7 @@ int rabinkarpi(string pat,string txt){
     //for calculating hash (d^(M-1))%q 
     int h=1;
     for(int i=1;i<=M-1;i++)
+    // we can use for like this also for(int i=0;i<M-1;i++)
         h=(h*d)%q;
     
      // Calculate the hash value of pattern and first 
