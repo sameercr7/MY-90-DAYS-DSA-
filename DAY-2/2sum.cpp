@@ -71,5 +71,6 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
     return res;
 }
+hi sameer fuck off
 
 >>>>>>> 5c800002a20a931073c1389272d3833f0f1eac38
