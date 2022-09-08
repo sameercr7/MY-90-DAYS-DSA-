@@ -67,8 +67,8 @@ int main() {
 // recursve solution
 // vedio link = https://www.youtube.com/watch?v=AxNNVECce8c&t=222s
 
-time complexity 2^n*n
-space complexity O(n) depth 2^n is n 
+// time complexity 2^n*n
+// space complexity O(n) depth 2^n is n 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -78,7 +78,7 @@ void funci(int ind,vector<int>& ds,vector<int>& nums,vector<vector<int>>& ans){
     if(ind>=nums.size()){
        ans.push_back(ds);
        return;
-    }
+    } 
 ds.push_back(nums[ind]);
 funci(ind+1,ds,nums,ans);
 ds.pop_back();
