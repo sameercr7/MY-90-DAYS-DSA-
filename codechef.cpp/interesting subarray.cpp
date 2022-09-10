@@ -111,3 +111,36 @@ int main() {
 // 0 49
 // -35 49
 // -35 49 
+
+// firstly yhi logic built kiya tha maine but TLE aagya tha ye o(n^2) lerha tha time toh agr tm long bi loge to bhi same TLE dkhega
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+       
+	    vector<int> vec(n);
+         int maxi=INT_MIN, mini =INT_MAX;
+	    for(auto &i:vec)
+	        cin>>i;
+	    for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+            int m1=vec[i]*vec[j];
+            maxi=max(maxi,m1);
+            mini=min(mini,m1);
+
+        }
+        }
+    
+        cout<<mini<<" "<< maxi<<endl;
+
+	}
+	return 0;
+}
