@@ -1,7 +1,12 @@
 //stockbuy and sell
 //NAIVE APPROACH
+
+
 //time complexity is o(n^2)
 //space complexity is o(1)
+
+
+
 // i/p ={1,5,3,8,12}
 // o/p 13
 // always zero as it is non decreasing order
@@ -22,6 +27,8 @@ int maximum_profit(int price[],int start,int end){
           {
             if(price[j]>=price[i]){
                 //we are calling function recursiveley again and again 
+                // maximum_profit(price,start,i-1) ye i ke left ka profit nikaal rha h profit
+                // maximum_profit(price,j+1,end); ye i ke right keliye nikaal rha h profit
                 int current_profit=price[j]-price[i]+maximum_profit(price,start,i-1)+maximum_profit(price,j+1,end);
                 profit=max(profit,current_profit);
             
