@@ -23,8 +23,8 @@
 // 2-usko set mein daalo ek(taaki duplicate apne aap remove ho jaye)
 // 3-ab humko vector<vector return krna h toh set ko dubara vectors mein convert krloo
 
-Time Complexity: O( 2^n *(k log (x) ))
-Space Complexity:  O(2^n * k)
+// Time Complexity: O( 2^n *(k log (x) ))
+// Space Complexity:  O(2^n * k)
 
 
 #include<bits/stdc++.h>
@@ -73,3 +73,63 @@ cout<<endl;
 
 	return 0;
 }
+
+
+.................................................................
+
+// approach optimized h ismein set ni lerhe h extra space ko avoid kr rhe h
+
+// time complexity = O(2^n*n).......n is for uting subset in array...as everry subset is near about of n size
+// space cpmplexity = O(2^n * k) to store every subset of average length k
+// Auxiliary space is O(n)  if n is the depth of the recursion tree.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+   
+      void subset(int ind,vector<int>& nums, vector<vector<int>>& ans,vector<int>& ds){
+        // pushing the empty vector in ans vector
+        ans.push_back(ds);
+        for(int i=ind;i<nums.size();i++){
+            // major trick this is the case when we have to continue bcoz this contains dulicate set
+            if(i!=ind && nums[i]==nums[i-1])
+                continue;
+            ds.push_back(nums[i]);
+            // is line ko smkjhne keliye ek baar dry run krke dkhlo
+            subset(i+1,nums,ans,ds);
+            // make sure whatever you added at the end just pop that so the recursion can be performed smoothly
+            ds.pop_back();
+        }
+        
+        
+    }
+    
+    
+    
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        vector<vector<int>> ans;
+        vector<int> ds;
+        // most important thing is this to sort .....if you will not sort then this logic of recusrion will not workk=
+        sort(nums.begin(),nums.end());
+        subset(0,nums,ans,ds);
+        return ans;
+        
+    }
+    
+   int main()
+     {
+        vector<int>  nums={1,2,2};
+        vector<vector<int>> k=subsetsWithDup(nums);
+        for(int i=0;i<k.size();i++){
+            for(int j=0;j<k[i].size();j++){
+                cout<<k[i][j]<<" ";
+
+            }
+            cout<<endl;
+
+
+        }
+    
+    return 0;
+     }
+
