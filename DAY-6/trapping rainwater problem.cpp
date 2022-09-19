@@ -1,4 +1,16 @@
 // TRAPPING RAINWATER PROBLEM
+problem link-https://leetcode.com/problems/trapping-rain-water/
+
+
+
+
+
+
+
+
+
+
+
 //time complexity is o(n^2)
 //space complexity is o(1)
 // i/p ={1,2,3} or {3,2,1} as if it is in Inc/Dec then it will never hold any water so o/p = 0 
@@ -6,7 +18,7 @@
 //  i/p ={3,0,1,2,5}
 //  o/p =6
 //naive approach
-// for loop is starting with 1 and ending with n-1 bcoz we dont have ot hceck there as they are last block
+// for loop is starting with 1 and ending with n-1 bcoz we dont have to check these as they are last block
 // we just take left max and right max for every i and take min of them an subtract it with block height
 #include<bits/stdc++.h>
 using namespace std;
@@ -58,3 +70,41 @@ int getwater(int arr[],int n){
         int res=res+(min(lmax[i],rmax[i])-arr[i]);
     }
 }
+
+
+// best approach
+// tim complexity=o(n)
+// space complexity=O(1)
+// approach simple sa h
+// two pointer approach lgado simple sa h
+// diagram mentioned h phle se hi
+
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        
+        int n = height.size(); 
+        int left=0; int right=n-1;
+        int res=0;
+        int maxleft=0, maxright=0;
+        
+        while(left<=right){
+            
+            if(height[left]<=height[right]){
+
+                if(height[left]>=maxleft) maxleft=height[left];
+                else res+=maxleft-height[left];
+                
+                left++;
+            }
+            else{
+
+                if(height[right]>=maxright) maxright= height[right];
+                else res+=maxright-height[right];
+                
+                right--;
+            }
+        }
+        return res;
+    }
+};
