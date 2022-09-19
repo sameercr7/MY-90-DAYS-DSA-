@@ -2,17 +2,9 @@
 problem link-https://leetcode.com/problems/trapping-rain-water/
 
 
-
-
-
-
-
-
-
-
-
 //time complexity is o(n^2)
 //space complexity is o(1)
+
 // i/p ={1,2,3} or {3,2,1} as if it is in Inc/Dec then it will never hold any water so o/p = 0 
 // o/p      0          0
 //  i/p ={3,0,1,2,5}
