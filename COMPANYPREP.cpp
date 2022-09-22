@@ -190,3 +190,9 @@ int main()
 
 // constructor and deconstructor in c++
 // link -https://www.geeksforgeeks.org/difference-between-constructor-and-destructor-in-c/
+
+// structure in c++
+// link-https://www.geeksforgeeks.org/structures-in-cpp/
+
+// constructor in c++
+// link-https://www.geeksforgeeks.org/constructors-c/
