@@ -45,6 +45,10 @@ public:
         return vec;
     }
 };
+
+
+
+
 =======
 #two sum problem 
 #make a hash table in which key and value is both stored if it is not in the map  if (mp.find(target - nums[i]) != mp.end()) then just update the map with its value
@@ -72,5 +76,34 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return res;
 }
 hi sameer fuck off
+// using set
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int pairWithSumX(int arr[],int n, int X)
+{
+    unordered_set<int> us;
+    for(int i = 0; i < n; i++)
+    {
+        if(us.find(X - arr[i]) != us.end())
+          return 1;
+          
+        us.insert(arr[i]);
+    }
+    return 0;
+    
+}
+
+int main()
+{
+    int arr[] = {3, 8, 4, 7, 6, 1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int X = 14;
+    
+    cout << pairWithSumX(arr, n, X);
+    return 0;
+}
 
 >>>>>>> 5c800002a20a931073c1389272d3833f0f1eac38
