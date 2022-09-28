@@ -1,5 +1,8 @@
 // find the middle using prefix and suffix
 
+// link-https://leetcode.com/problems/find-pivot-index/submissions/
+// link-https://leetcode.com/problems/find-the-middle-index-in-array/
+
 // time cpmplexity=o(n)
 // space complexity=o(n)
 
