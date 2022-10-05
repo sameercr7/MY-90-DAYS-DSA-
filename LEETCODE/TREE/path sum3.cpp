@@ -37,3 +37,31 @@ public:
         
     }
 };
+
+// approach -2
+// two pointer
+// in this we are standing on every node and checking the summation is equal to given target sum or not
+
+
+class Solution {
+public:
+    int ans=0;
+    
+    void dfs(TreeNode* root, int sum,long s){
+        if(root==NULL)
+            return;
+        s+=root->val;
+        if(s==sum)
+            ans++;
+        dfs(root->left,sum,s);
+        dfs(root->right,sum,s);
+    }
+    int pathSum(TreeNode* root, int sum) {
+        if(root){
+            dfs(root,sum,0);
+            pathSum(root->left,sum);
+            pathSum(root->right,sum);
+        }
+        return ans;
+    }
+};
