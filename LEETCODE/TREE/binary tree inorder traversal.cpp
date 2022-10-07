@@ -3,23 +3,26 @@
 
 
 
-
 class Solution {
 public:
-    void inovate(TreeNode* root,vector<int>& vec){
+    void fun(TreeNode* root,vector<int>& v){
         if(root==NULL)
             return;
-        inovate(root->left,vec);
-            vec.push_back(root->val);
-        inovate(root->right,vec);
+        v.push_back(root->val);
+        fun(root->left,v);
+        fun(root->right,v);
+
     }
     
     
-    vector<int> inorderTraversal(TreeNode* root) {
-        
-        vector<int> vec;
-        inovate(root,vec);
-        return vec;
-        
+    vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> v;
+    fun(root,v);  
+    return v;  
+
+
+
+
+
     }
 };
