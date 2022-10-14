@@ -20,7 +20,7 @@ public:
         if(head->next==NULL)
           return NULL;
         int count=0;
-        ListNode*dummy=head;
+        ListNode* dummy=head;
         while(dummy!=NULL){
             dummy=dummy->next;
             count++;
@@ -57,8 +57,8 @@ public:
     ListNode* deleteMiddle(ListNode* head) {
         if(head->next==NULL)
           return NULL;
-        ListNode*fast=head->next->next;
-        ListNode*slow=head;
+        ListNode* fast=head->next->next;
+        ListNode* slow=head;
         while(fast!=NULL && fast->next!=NULL){
             fast=fast->next->next;
            slow= slow->next;
@@ -67,5 +67,3 @@ public:
         return head;
     }
 };
-
-  
