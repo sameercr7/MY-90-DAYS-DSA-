@@ -45,9 +45,10 @@ public:
 
 public:
 
-    ListNode* deleteMiddle(ListNode* head) {
-        if(head->next==NULL)
-          return NULL;
+    ListNode* middleNode(ListNode* head) {
+        // there is no need of null
+        // if(head->next==NULL)
+        //   return NULL;
         ListNode* fast=head;
         ListNode* slow=head;
         while(fast!=NULL && fast->next!=NULL){
