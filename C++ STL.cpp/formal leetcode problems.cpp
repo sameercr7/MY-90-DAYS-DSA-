@@ -12,3 +12,6 @@
 4-
 // Tea with tangerines
 // link-https://codeforces.com/contest/1735/problem/B
+5-
+// check if the sentence is pangram
+// link-https://leetcode.com/problems/check-if-the-sentence-is-pangram/
