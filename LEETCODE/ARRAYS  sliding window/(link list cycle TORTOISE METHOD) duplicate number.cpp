@@ -49,12 +49,14 @@ return 0;
 // best approach using link list cycle method
 // also known as tortoise method
 // two pointers we take slow and fast 
-// slow moves 1 and fas moeves 2 and..ehnever the collide then we restrict the moves of fast as one
+// slow moves 1 and fas moeves 2 and..whenever they  collide then we restrict the moves of fast as one
 // and now jo bi collison pe milega wp duplicate hi hoga
 
 // time complexity =O(n)
 // space complexity =O(1)
 
+// e.g=   {2,5,9,6,9,3,8,9,7,1}
+// index:={0,1,2,3,4,5,6,7,8,9}
 
 #include<bits/stdc++.h>
 using namespace std;
