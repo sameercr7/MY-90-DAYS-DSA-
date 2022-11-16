@@ -18,11 +18,10 @@ class Solution
 
 
 
-vector<int> ans;
-
+ vector<int> ans;
     if(root==NULL)
         return ans;
-    queue<pair<TreeNode*,int>> q;
+    queue<pair<Node*,int>> q;
     map<int,int> mp;
 //     first we will push the first root and the line no
     q.push({root,0});
@@ -39,9 +38,13 @@ vector<int> ans;
             q.push({node->left,line-1});
         if(node->right!=NULL)
 //             why line +1 as in right line is +1
-            q.push(node->right,line+1);
+            q.push({node->right,line+1});
     }
     for(auto it:mp)
         ans.push_back(it.second);
     return ans;
-    }}
+        
+        //Your code here
+    }
+
+};
