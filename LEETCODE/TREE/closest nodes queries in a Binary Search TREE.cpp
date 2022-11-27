@@ -1,6 +1,10 @@
 // link-https://leetcode.com/contest/weekly-contest-320/problems/closest-nodes-queries-in-a-binary-search-tree/
 // youtube binarymagic-https://www.youtube.com/watch?v=6BhVLGOg2to&t=151s
 
+
+
+// we are not using linear search as constraint is given in 10^5 so it will finally lead to TLE
+
 class Solution {
 public:
     void inorder(TreeNode* root, vector<int>& nums) {
