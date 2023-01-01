@@ -54,7 +54,7 @@ public:
 #make a hash table in which key and value is both stored if it is not in the map  if (mp.find(target - nums[i]) != mp.end()) then just update the map with its value
 #and if found the eturn the answer simple
 
-
+// https://leetcode.com/problems/two-sum/
 
 vector<int> twoSum(vector<int>& nums, int target) {
 
