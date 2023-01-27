@@ -1,0 +1,24 @@
+setTimeout(function(){
+    console.log("here comes the function");
+},5000);
+
+function x(y)
+{
+    console.log("x");
+    y();
+}
+x(function y(){
+   console.log("y");
+   });
+
+//    try to put all in the function 
+function attachEventlisteners(){
+    let c=0;
+    document.getElementById("clickMe")
+    .addEventListener("click",function () {
+     console.log("Button clicked",c++);
+ 
+    });
+}
+attachEventlisteners();
+
