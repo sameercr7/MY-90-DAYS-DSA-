@@ -1,0 +1,25 @@
+How to setup Appium via npm
+1.	Install Java and setup Environment variables
+2.	Install Sdk and setup Environment variables
+3.	Install Appium
+
+Step-1 Download and install Node.js
+4.	 Open node.js website using this link - (https://nodejs.org/).
+5.	Download latest version of NodeJS (Recommended for Most Users).
+6.	Install it and wait for complete installation.
+7.	To verify that installation is successful (Start->search Node.js and Node.js command prompt).
+
+Step-2 Install Appium using Node.JS
+
+8.	Open Node.JS Command prompt from start menu of windows.
+9.	In Node.js command prompt type this command (npm install –g appium) and hit Enter.
+10.	Once you hit Enter you will see that Node will start installing Appium (you might have to wait for few seconds to see the actual installation happening).
+11.	Once installation complete you will see that cmd prompt screen as soon in below screenshot:
+ 
+
+12.	To check the Appium has been installed, run this command- appium –v on cmd prompt.
+13.	Set Environment Variables for appium like:
+APPIUM_LIB_PATH=C:\ProgramFiles(x86)\Appium\resources\app\node_modules\appium\build\lib
+NODEJS_PATH= C:\Program Files\nodejs
+14.	Download Eclipse and start scripting
+     		    
