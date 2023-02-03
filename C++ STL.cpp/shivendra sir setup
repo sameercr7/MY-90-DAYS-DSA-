@@ -118,3 +118,58 @@ form.addEventListener('keyup', (e) => {
     }
 })
 
+
+
+
+import sys
+from PyQt5.QtCore import QUrl
+# used for widget.
+# It can be used to display web pages, as well as to provide an interface for web browser applications.
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+#  The QApplication class is used to create an application object which is needed to run a GUI application. The other classes are used to create various widgets such as line edits, push buttons and layouts which can be used to arrange the widgets in a GUI window.
+from PyQt5.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QWidget
+# This code creates a class called Browser that is a subclass of the QWidget class. The QWidget class is used to create user interfaces in the Qt library, which is a framework for creating graphical user interfaces (GUIs). The Browser class will inherit all of the properties and methods from the QWidget class, allowing it to create its own GUI.
+class Browser(QWidget):
+    #  The constructor method is called when an object of the class is created and it is used to initialize the attributes of the object. In this case, the constructor method does not have any parameters, so it does not do anything.
+    def _init_(self):
+        # This code calls the init method of the parent class. The init method is used to initialize an object's state
+        super()._init_()
+        # This code creates a QWebEngineView object and assigns it to the instance variable web_view. The QWebEngineView class provides a widget that is used to view and edit web documents. It is part of the Qt library, which is a cross-platform application framework used for developing GUI applications.
+        self.web_view = QWebEngineView()
+        # A QLineEdit is a widget that allows the user to enter and edit a single line of text.
+        self.line_edit = QLineEdit()
+        # This code creates a QPushButton widget with the text "Back" and assigns it to the instance variable self.back_button. The button can then be used to navigate back to a previous page or view in an application.
+
+        self.back_button = QPushButton("Back")
+        # This code creates a QPushButton object with the text "Forward" and assigns it to the attribute self.forward_button. The button can be used to perform an action when clicked.
+        self.forward_button = QPushButton("Forward")
+        # This method is likely responsible for setting up the user interface for the program, such as creating windows, buttons, and other elements.
+        self.init_ui()
+
+    def init_ui(self):
+        h_layout = QHBoxLayout()
+        h_layout.addWidget(self.back_button)
+        h_layout.addWidget(self.forward_button)
+        h_layout.addWidget(self.line_edit)
+
+        v_layout = QVBoxLayout()
+        v_layout.addLayout(h_layout)
+        v_layout.addWidget(self.web_view)
+
+        self.setLayout(v_layout)
+
+        self.back_button.clicked.connect(self.web_view.back)
+        self.forward_button.clicked.connect(self.web_view.forward)
+        self.line_edit.returnPressed.connect(self.load_url)
+
+        self.show()
+
+    def load_url(self):
+        url = QUrl(self.line_edit.text())
+        self.web_view.load(url)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    browser = Browser()
+    sys.exit(app.exec_())
+
