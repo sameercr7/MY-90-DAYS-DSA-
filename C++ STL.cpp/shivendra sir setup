@@ -1,28 +1,61 @@
-How to setup Appium via npm
-1.	Install Java and setup Environment variables
-2.	Install Sdk and setup Environment variables
-3.	Install Appium
+import sys
+from PyQt5.QtCore import QUrl
+# used for widget.
+# It can be used to display web pages, as well as to provide an interface for web browser applications.
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+#  The QApplication class is used to create an application object which is needed to run a GUI application. The other classes are used to create various widgets such as line edits, push buttons and layouts which can be used to arrange the widgets in a GUI window.
+from PyQt5.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QWidget
+# This code creates a class called Browser that is a subclass of the QWidget class. The QWidget class is used to create user interfaces in the Qt library, which is a framework for creating graphical user interfaces (GUIs). The Browser class will inherit all of the properties and methods from the QWidget class, allowing it to create its own GUI.
+class Browser(QWidget):
+    #  The constructor method is called when an object of the class is created and it is used to initialize the attributes of the object. In this case, the constructor method does not have any parameters, so it does not do anything.
+    def _init_(self):
+        # This code calls the init method of the parent class. The init method is used to initialize an object's state
+        super()._init_()
+        # This code creates a QWebEngineView object and assigns it to the instance variable web_view. The QWebEngineView class provides a widget that is used to view and edit web documents. It is part of the Qt library, which is a cross-platform application framework used for developing GUI applications.
+        self.web_view = QWebEngineView()
+        # A QLineEdit is a widget that allows the user to enter and edit a single line of text.
+        self.line_edit = QLineEdit()
+        # This code creates a QPushButton widget with the text "Back" and assigns it to the instance variable self.back_button. The button can then be used to navigate back to a previous page or view in an application.
 
-Step-1 Download and install Node.js
-4.	 Open node.js website using this link - (https://nodejs.org/).
-5.	Download latest version of NodeJS (Recommended for Most Users).
-6.	Install it and wait for complete installation.
-7.	To verify that installation is successful (Start->search Node.js and Node.js command prompt).
+        self.back_button = QPushButton("Back")
+        # This code creates a QPushButton object with the text "Forward" and assigns it to the attribute self.forward_button. The button can be used to perform an action when clicked.
+        self.forward_button = QPushButton("Forward")
+        # This method is likely responsible for setting up the user interface for the program, such as creating windows, buttons, and other elements.
+        self.init_ui()
+# could be used to set up the initial layout of a window or page, such as setting the size, position, and other properties of elements on the page.
+    def init_ui(self):
+        # code creates a horizontal box layout object in the Qt library. A QHBoxLayout is a type of layout that arranges widgets horizontally from left to right
+        h_layout = QHBoxLayout() 
+        h_layout.addWidget(self.back_button)
+        h_layout.addWidget(self.forward_button)
+# A line edit widget is a single-line text editor that allows the user to enter and edit text.
+        h_layout.addWidget(self.line_edit)
 
-Step-2 Install Appium using Node.JS
+        v_layout = QVBoxLayout()
+        v_layout.addLayout(h_layout)
+        v_layout.addWidget(self.web_view)
 
-8.	Open Node.JS Command prompt from start menu of windows.
-9.	In Node.js command prompt type this command (npm install –g appium) and hit Enter.
-10.	Once you hit Enter you will see that Node will start installing Appium (you might have to wait for few seconds to see the actual installation happening).
-11.	Once installation complete you will see that cmd prompt screen as soon in below screenshot:
- 
+        self.setLayout(v_layout)
+# This code connects the backbutton to the webview.back function, so that when the backbutton is clicked, the webview will go back one page.
+        self.back_button.clicked.connect(self.web_view.back)
+        self.forward_button.clicked.connect(self.web_view.forward)
+        self.line_edit.returnPressed.connect(self.load_url)
 
-12.	To check the Appium has been installed, run this command- appium –v on cmd prompt.
-13.	Set Environment Variables for appium like:
-APPIUM_LIB_PATH=C:\ProgramFiles(x86)\Appium\resources\app\node_modules\appium\build\lib
-NODEJS_PATH= C:\Program Files\nodejs
-14.	Download Eclipse and start scripting
-     		    
+        self.show()
+# generally it is used to load a URL from a web page or other source.
+    def load_url(self):
+        # The QUrl object is used to represent a URL in Qt applications.
+        url = QUrl(self.line_edit.text())
+        # This code loads a given URL into a web view. The web view is an object of the class that contains this code, and the URL is passed as an argument.
+        self.web_view.load(url)
+
+if __name__ == '__main__':
+    # This code creates an instance of the QApplication class. The QApplication class manages the GUI application
+    app = QApplication(sys.argv)
+    # This code creates a new instance of the Browser class. This class is used to create a web browser object that can be used to interact with websites and webpages. The browser object can be used to open webpages, navigate between pages, and interact with elements on the page.
+    browser = Browser()
+    # This code terminates the application. The sys.exit() function exits the application, and app.exec_() is a function that runs the main loop of the application. Together, they terminate the application.
+    sys.exit(app.exec_())
 
 
 import bot from './assets/bot.svg'
